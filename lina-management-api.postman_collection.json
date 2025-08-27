@@ -1,0 +1,1972 @@
+{
+	"info": {
+		"_postman_id": "a8e5b9c7-3f5e-4b5a-8d5c-6f7d8e9f0a1b",
+		"name": "Lina Management API",
+		"description": "Collection for all Lina Management API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Farms",
+			"item": [
+				{
+					"name": "Create Farm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"FARM001\",\n    \"name\": \"Green Valley Farm\",\n    \"area\": 5000,\n    \"coordinates\": \"30.0444° N, 31.2357° E\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/farms",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Farms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/farms",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Farm by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/farms/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"farms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "farm_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Farm",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Farm Name\",\n    \"area\": 6000\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/farms/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"farms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "farm_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Farm",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/farms/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"farms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "farm_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sectors",
+			"item": [
+				{
+					"name": "Create Sector",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"SEC001\",\n    \"name\": \"North Sector\",\n    \"area\": 1200,\n    \"coordinates\": \"30.0450° N, 31.2360° E\",\n    \"farm_id\": \"farm_id_here\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/sectors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sectors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sectors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sector by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sectors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sectors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sector_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sector",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Sector Name\",\n    \"area\": 1500\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/sectors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sectors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sector_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sector",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sectors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sectors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sector_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blocks",
+			"item": [
+				{
+					"name": "Create Block",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"BLK001\",\n    \"name\": \"Block A\",\n    \"area\": 500,\n    \"coordinates\": \"30.0455° N, 31.2365° E\",\n    \"sector_id\": \"sector_id_here\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/blocks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Blocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blocks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Block by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blocks/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blocks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "block_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Block",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Block Name\",\n    \"area\": 600\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/blocks/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blocks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "block_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Block",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blocks/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blocks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "block_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crops",
+			"item": [
+				{
+					"name": "Create Crop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"CRP001\",\n    \"name\": \"Tomatoes\",\n    \"variety\": \"Roma\",\n    \"planting_date\": \"2023-03-15\",\n    \"expected_harvest_date\": \"2023-06-15\",\n    \"block_id\": \"block_id_here\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/crops",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"crops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Crops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/crops",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"crops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Crop by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/crops/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"crops",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "crop_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Crop",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Crop Name\",\n    \"expected_harvest_date\": \"2023-06-30\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/crops/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"crops",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "crop_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Crop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/crops/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"crops",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "crop_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pests",
+			"item": [
+				{
+					"name": "Create Pest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"PST001\",\n    \"name\": \"Aphids\",\n    \"pesticide_id\": \"pesticide_id_here\",\n    \"dose\": 5,\n    \"infected_crop_id\": \"crop_id_here\",\n    \"season\": \"Summer\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pests",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Pests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pests",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pest by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pests/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pest",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Pest Name\",\n    \"dose\": 6\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pests/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pest",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pests/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diseases",
+			"item": [
+				{
+					"name": "Create Disease",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"DIS001\",\n    \"name\": \"Powdery Mildew\",\n    \"treatment\": \"Fungicide Application\",\n    \"symptoms\": \"White powdery spots on leaves\",\n    \"infected_crop_id\": \"crop_id_here\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/diseases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Diseases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/diseases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Disease by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/diseases/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"diseases",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "disease_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Disease",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Disease Name\",\n    \"treatment\": \"Updated Treatment Method\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/diseases/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"diseases",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "disease_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Disease",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/diseases/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"diseases",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "disease_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fungi",
+			"item": [
+				{
+					"name": "Create Fungus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"FNG001\",\n    \"name\": \"Fusarium\",\n    \"fungicide_id\": \"fungicide_id_here\",\n    \"dose\": 3.5,\n    \"infected_crop_id\": \"crop_id_here\",\n    \"season\": \"Spring\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fungi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Fungi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fungus by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungi/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungus_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Fungus",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Fungus Name\",\n    \"dose\": 4.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fungi/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungus_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Fungus",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungi/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungus_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auditors",
+			"item": [
+				{
+					"name": "Create Auditor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"AUD001\",\n    \"name\": \"John Smith\",\n    \"phone\": \"+201234567890\",\n    \"email\": \"john.smith@example.com\",\n    \"address\": \"123 Main St, Cairo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/auditors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auditors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Auditors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auditors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auditors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auditor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auditors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auditors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "auditor_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Auditor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Auditor Name\",\n    \"phone\": \"+201234567891\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/auditors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auditors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "auditor_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Auditor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auditors/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auditors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "auditor_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Engineers",
+			"item": [
+				{
+					"name": "Create Engineer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"ENG001\",\n    \"name\": \"Ahmed Hassan\",\n    \"phone\": \"+201234567890\",\n    \"email\": \"ahmed.hassan@example.com\",\n    \"address\": \"456 Engineering St, Cairo\",\n    \"specialization\": \"Agricultural Engineering\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/engineers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"engineers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Engineers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/engineers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"engineers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Engineer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/engineers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"engineers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "engineer_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Engineer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Engineer Name\",\n    \"phone\": \"+201234567891\",\n    \"specialization\": \"Irrigation Engineering\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/engineers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"engineers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "engineer_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Engineer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/engineers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"engineers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "engineer_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workers",
+			"item": [
+				{
+					"name": "Create Worker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"WRK001\",\n    \"name\": \"Mohamed Ali\",\n    \"phone\": \"+201234567890\",\n    \"address\": \"789 Worker St, Cairo\",\n    \"farm_id\": \"farm_id_here\",\n    \"role\": \"Field Worker\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/workers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Worker by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "worker_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Worker",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Worker Name\",\n    \"phone\": \"+201234567891\",\n    \"role\": \"Supervisor\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/workers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "worker_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Worker",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "worker_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Watering Logs",
+			"item": [
+				{
+					"name": "Create Watering Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2023-05-15\",\n    \"sector_id\": \"sector_id_here\",\n    \"crop_id\": \"crop_id_here\",\n    \"water_amount\": 500,\n    \"water_source\": \"Well\",\n    \"duration\": 60,\n    \"engineer_id\": \"engineer_id_here\",\n    \"notes\": \"Regular watering schedule\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/watering-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"watering-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Watering Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/watering-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"watering-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Watering Log by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/watering-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"watering-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "watering_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Watering Log",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"water_amount\": 600,\n    \"duration\": 75,\n    \"notes\": \"Increased watering due to hot weather\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/watering-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"watering-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "watering_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Watering Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/watering-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"watering-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "watering_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fertilization Logs",
+			"item": [
+				{
+					"name": "Create Fertilization Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2023-05-20\",\n    \"sector_id\": \"sector_id_here\",\n    \"crop_id\": \"crop_id_here\",\n    \"fertilizer_name\": \"NPK 20-20-20\",\n    \"fertilizer_amount\": 50,\n    \"application_method\": \"Drip Irrigation\",\n    \"engineer_id\": \"engineer_id_here\",\n    \"auditor_id\": \"auditor_id_here\",\n    \"notes\": \"Regular fertilization schedule\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fertilization-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fertilization-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Fertilization Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fertilization-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fertilization-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fertilization Log by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fertilization-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fertilization-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fertilization_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Fertilization Log",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fertilizer_amount\": 60,\n    \"notes\": \"Increased fertilizer amount due to nutrient deficiency\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fertilization-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fertilization-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fertilization_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Fertilization Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fertilization-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fertilization-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fertilization_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pest Logs",
+			"item": [
+				{
+					"name": "Create Pest Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pest\": \"Aphids\",\n    \"sector_id\": \"sector_id_here\",\n    \"date\": \"2023-05-25\",\n    \"number_of_plants\": 20,\n    \"crop_id\": \"crop_id_here\",\n    \"affected_area\": 100,\n    \"area_measurement_unit\": \"square meters\",\n    \"affected_crop_part\": \"Leaves\",\n    \"pesticide_name\": \"Neem Oil\",\n    \"dose_used\": 2.5,\n    \"dose_measurement_unit\": \"liters\",\n    \"machine_id\": \"machine_id_here\",\n    \"auditor_id\": \"auditor_id_here\",\n    \"engineer_id\": \"engineer_id_here\",\n    \"detection_date\": \"2023-05-23\",\n    \"treatment_date\": \"2023-05-25\",\n    \"notes\": \"Moderate infestation, treated with organic pesticide\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pest-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pest-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Pest Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pest-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pest-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pest Log by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pest-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pest-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pest Log",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number_of_plants\": 25,\n    \"affected_area\": 120,\n    \"dose_used\": 3.0,\n    \"notes\": \"Infestation worse than initially assessed, increased treatment dose\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pest-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pest-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pest Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pest-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pest-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pest_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fungicides Logs",
+			"item": [
+				{
+					"name": "Create Fungicides Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fungus\": \"Powdery Mildew\",\n    \"sector_id\": \"sector_id_here\",\n    \"date\": \"2023-05-28\",\n    \"number_of_plants\": 15,\n    \"crop_id\": \"crop_id_here\",\n    \"type\": \"Foliar\",\n    \"affected_area\": 80,\n    \"area_measurement_unit\": \"square meters\",\n    \"affected_crop_part\": \"Leaves and Stems\",\n    \"infection_status\": \"Moderate\",\n    \"fungicide_name\": \"Sulfur Spray\",\n    \"dose_used\": 2.0,\n    \"dose_measurement_unit\": \"liters\",\n    \"safety_days\": \"7\",\n    \"machine_id\": \"machine_id_here\",\n    \"auditor_id\": \"auditor_id_here\",\n    \"engineer_id\": \"engineer_id_here\",\n    \"detection_date\": \"2023-05-26\",\n    \"treatment_date\": \"2023-05-28\",\n    \"notes\": \"First treatment, will monitor for effectiveness\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fungicides-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungicides-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Fungicides Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungicides-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungicides-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fungicides Log by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungicides-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungicides-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungicides_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Fungicides Log",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number_of_plants\": 18,\n    \"affected_area\": 90,\n    \"infection_status\": \"Severe\",\n    \"dose_used\": 2.5,\n    \"notes\": \"Infection more severe than initially assessed, increased treatment dose\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fungicides-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungicides-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungicides_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Fungicides Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/fungicides-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fungicides-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fungicides_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weather Logs",
+			"item": [
+				{
+					"name": "Create Weather Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2023-05-30\",\n    \"farm_id\": \"farm_id_here\",\n    \"temperature\": 32.5,\n    \"humidity\": 65,\n    \"wind_speed\": 10.2,\n    \"wind_direction\": \"NE\",\n    \"rainfall\": 0,\n    \"notes\": \"Hot and humid day, no rainfall\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/weather-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"weather-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Weather Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/weather-logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"weather-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Log by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/weather-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"weather-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "weather_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Weather Log",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"temperature\": 33.0,\n    \"humidity\": 68,\n    \"rainfall\": 2.5,\n    \"notes\": \"Unexpected afternoon rainfall\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/weather-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"weather-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "weather_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Weather Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/weather-logs/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"weather-logs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "weather_log_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
